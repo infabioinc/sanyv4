@@ -226,19 +226,19 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
 
         {/* Restrained cinematic headline — bottom-left, lets the film breathe */}
         <div className="relative z-20 w-full flex-1 flex items-end">
-          <div className="w-full px-6 sm:px-12 md:px-16 lg:px-20 pb-10 sm:pb-14">
+          <div className="w-full px-6 sm:px-12 md:px-16 lg:px-20 pb-5 sm:pb-6">
             <div className="max-w-2xl">
               <span className="eyebrow text-white/90">
                 <span className="w-6 h-px bg-sany-red"></span>
                 Commercial Electric Heavy Haulers
               </span>
-              <h1 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white leading-[1.05] tracking-tight">
+              <h1 className="mt-4 text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-white leading-[1.08] tracking-tight">
                 Smarter power.<br />Stronger performance.
               </h1>
-              <p className="mt-5 max-w-xl text-sm sm:text-base text-white/75 leading-relaxed">
+              <p className="mt-3 max-w-lg text-sm text-white/75 leading-relaxed">
                 Heavy-duty electric trucks engineered for extreme payloads and the lowest total cost of ownership — built for the next mile of Indian freight.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
+              <div className="mt-6 flex flex-wrap items-center gap-3">
                 <button
                   onClick={() => scrollToSection('models')}
                   className="btn-red px-6 py-3 text-sm cursor-pointer"
@@ -364,10 +364,10 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
             { id: '5565e', name: 'SANY 5565E', tag: 'Intercity Industrial Freight Flagship', desc: 'Engineered for heavy industrial transport and long-haul intercity routes with maximum uptime and sub-zero thermal resilience.', image: '/images/sany-hero-bridge.jpg' },
           ].map((m, i) => (
             <div key={m.id} className="grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-slate-100 first:border-t-0">
-              <div className={`relative min-h-[300px] sm:min-h-[440px] overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <div className={`relative min-h-[300px] lg:min-h-0 overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <img src={m.image} alt={m.name} className="absolute inset-0 w-full h-full object-cover object-center" />
               </div>
-              <div className={`flex items-center px-6 sm:px-12 md:px-16 lg:px-20 py-12 lg:py-0 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <div className={`flex items-center px-6 sm:px-12 md:px-16 lg:px-20 py-12 lg:py-14 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <div className="max-w-md">
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-sany-ink tracking-tight leading-[1.05]">{m.name}</h3>
                   <div className="mt-2 text-sm font-semibold text-slate-800">{m.tag}</div>
@@ -489,13 +489,13 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
                       alt={p.title}
                       className="absolute inset-0 w-full h-full object-cover brightness-[0.62] group-hover:scale-[1.04] transition-transform duration-[900ms] ease-out"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-sany-ink via-sany-ink/45 to-sany-ink/10" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-sany-ink/95 via-sany-ink/30 to-transparent" />
                     <div className="relative z-10 p-6 sm:p-8">
                       <div className="flex items-center gap-2.5 mb-3">
                         <span className="text-sm font-extrabold text-white/70">{p.step}</span>
                         <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70">{p.eyebrow}</span>
                       </div>
-                      <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight leading-tight">
+                      <h3 className="text-lg sm:text-xl font-extrabold text-white tracking-tight leading-tight">
                         {p.title}
                       </h3>
                       <p className="text-sm text-white/70 mt-2.5 max-w-md leading-relaxed">

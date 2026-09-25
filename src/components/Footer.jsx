@@ -132,7 +132,7 @@ export default function Footer({ currentPage = 'home', onNavigate, onOpenQuote }
               </li>
               <li>
                 <button onClick={() => scrollToSection('models')} className="hover:text-white transition-colors text-left">
-                  SANY 5565E (405 HP / 282 kWh)
+                  SANY 5565E (650 HP / 462 kWh)
                 </button>
               </li>
               <li>
