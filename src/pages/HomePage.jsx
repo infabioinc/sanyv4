@@ -224,20 +224,6 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
           <div className="absolute inset-0 bg-gradient-to-r from-sany-ink/70 via-transparent to-transparent"></div>
         </div>
 
-        {/* Floating Circular Video Pause/Play Control (Exact Volvo Reference Match) */}
-        <button
-          onClick={toggleHeroVideo}
-          className="absolute bottom-20 sm:bottom-24 right-6 sm:right-12 z-30 w-11 h-11 rounded-full bg-slate-950/85 hover:bg-slate-900 border border-white/25 text-white flex items-center justify-center transition-all shadow-xl cursor-pointer group"
-          title={isHeroVideoPlaying ? "Pause Video" : "Play Video"}
-          aria-label={isHeroVideoPlaying ? "Pause Video" : "Play Video"}
-        >
-          {isHeroVideoPlaying ? (
-            <span className="text-xs font-black tracking-tighter">❚❚</span>
-          ) : (
-            <Play className="w-4 h-4 fill-white ml-0.5" />
-          )}
-        </button>
-
         {/* Restrained cinematic headline — bottom-left, lets the film breathe */}
         <div className="relative z-20 w-full flex-1 flex items-end">
           <div className="w-full px-6 sm:px-12 md:px-16 lg:px-20 pb-10 sm:pb-14">
