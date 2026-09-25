@@ -364,9 +364,9 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
             { id: '5550e', name: 'SANY 5550E', tag: 'High-Torque Port & Industrial Hauler', desc: 'Built for high-volume commercial logistics, port terminal haulage and extreme industrial duty cycles with 2,800 Nm instant torque.', image: '/images/sany-5550e-model.jpg' },
             { id: '5565e', name: 'SANY 5565E', tag: 'Intercity Industrial Freight Flagship', desc: 'Engineered for heavy industrial transport and long-haul intercity routes with maximum uptime and sub-zero thermal resilience.', image: '/images/sany-hero-bridge.jpg' },
           ].map((m, i) => (
-            <div key={m.id} className="grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-slate-100 first:border-t-0">
-              <div className={`relative min-h-[300px] lg:min-h-0 overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <img src={m.image} alt={m.name} className="absolute inset-0 w-full h-full object-cover object-center" />
+            <div key={m.id} className="grid grid-cols-1 lg:grid-cols-2 items-center border-t border-slate-100 first:border-t-0">
+              <div className={`relative overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <img src={m.image} alt={m.name} className="w-full h-auto block" />
               </div>
               <div className={`flex items-center px-6 sm:px-12 md:px-16 lg:px-20 py-12 lg:py-14 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <div className="max-w-md">
