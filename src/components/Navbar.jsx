@@ -183,22 +183,6 @@ export default function Navbar({ currentPage = 'home', onNavigate, onOpenQuote, 
               Specifications
             </button>
 
-            {/* 3. TECHNOLOGY */}
-            <div 
-              className="relative py-2.5"
-              onMouseEnter={() => handleMouseEnter('tech')}
-            >
-              <button
-                onClick={() => handleNavClick('technology')}
-                className={`flex items-center gap-1 transition-colors cursor-pointer py-0.5 ${
-                  activeMegaMenu === 'tech' ? 'text-blue-600' : 'hover:text-blue-600'
-                }`}
-              >
-                <span>Technology</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeMegaMenu === 'tech' ? 'rotate-180 text-blue-600' : 'text-slate-400'}`} />
-              </button>
-            </div>
-
             {/* 4. WHY SANY */}
             <div 
               className="relative py-2.5"
@@ -408,80 +392,6 @@ export default function Navbar({ currentPage = 'home', onNavigate, onOpenQuote, 
         )}
 
         {/* 2. TECHNOLOGY MEGA MENU */}
-        {activeMegaMenu === 'tech' && (
-          <div 
-            className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl z-50"
-            onMouseEnter={() => handleMouseEnter('tech')}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className="max-w-7xl mx-auto px-6 md:px-10 py-7">
-              <div className="grid grid-cols-4 gap-5">
-                
-                <div 
-                  onClick={() => handleNavClick('performance')}
-                  className="p-4 bg-slate-50 border border-slate-200 hover:border-blue-500 transition-all cursor-pointer group"
-                >
-                  <div className="w-9 h-9 bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:bg-sany-red group-hover:text-white transition-colors">
-                    <BatteryCharging className="w-4 h-4" />
-                  </div>
-                  <h4 className="text-sm font-bold text-slate-900 uppercase group-hover:text-blue-600 transition-colors">
-                    DC Fast Charging Solutions
-                  </h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                    Under 6-minute robotic replacement for 24/7 continuous duty cycles.
-                  </p>
-                </div>
-
-                <div 
-                  onClick={() => handleNavClick('performance')}
-                  className="p-4 bg-slate-50 border border-slate-200 hover:border-blue-500 transition-all cursor-pointer group"
-                >
-                  <div className="w-9 h-9 bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:bg-sany-red group-hover:text-white transition-colors">
-                    <Zap className="w-4 h-4" />
-                  </div>
-                  <h4 className="text-sm font-bold text-slate-900 uppercase group-hover:text-blue-600 transition-colors">
-                    Dual PMSM Powertrain
-                  </h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                    2,800 Nm instant axle torque with 96.5% motor efficiency.
-                  </p>
-                </div>
-
-                <div 
-                  onClick={() => handleNavClick('advantage')}
-                  className="p-4 bg-slate-50 border border-slate-200 hover:border-blue-500 transition-all cursor-pointer group"
-                >
-                  <div className="w-9 h-9 bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:bg-sany-red group-hover:text-white transition-colors">
-                    <Cpu className="w-4 h-4" />
-                  </div>
-                  <h4 className="text-sm font-bold text-slate-900 uppercase group-hover:text-blue-600 transition-colors">
-                    Liquid Thermal Control
-                  </h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                    Maintains 25°C core cell temperature in -40°C to +55°C climates.
-                  </p>
-                </div>
-
-                <div 
-                  onClick={() => handleNavClick('advantage')}
-                  className="p-4 bg-slate-50 border border-slate-200 hover:border-blue-500 transition-all cursor-pointer group"
-                >
-                  <div className="w-9 h-9 bg-blue-50 text-blue-600 flex items-center justify-center mb-3 group-hover:bg-sany-red group-hover:text-white transition-colors">
-                    <ShieldCheck className="w-4 h-4" />
-                  </div>
-                  <h4 className="text-sm font-bold text-slate-900 uppercase group-hover:text-blue-600 transition-colors">
-                    780 MPa High-Tensile Steel
-                  </h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-                    Heavy-duty cell-to-chassis structural cage with IP69K sealing.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        )}
-
         {/* 3. WHY SANY MEGA MENU */}
         {activeMegaMenu === 'why' && (
           <div 
@@ -724,14 +634,6 @@ export default function Navbar({ currentPage = 'home', onNavigate, onOpenQuote, 
                 >
                   <span>Fleet TCO &amp; ROI Calculator</span>
                   <span className="text-[10px] font-bold bg-blue-100 text-blue-700 px-2 py-0.5 rounded">62% Savings</span>
-                </button>
-
-                <button
-                  onClick={() => handleNavClick('technology')}
-                  className="w-full text-left py-2.5 px-2 flex items-center justify-between font-bold text-slate-800 text-sm border-b border-slate-100"
-                >
-                  <span>Proprietary EV Technology</span>
-                  <ChevronRight className="w-4 h-4 text-slate-400" />
                 </button>
 
                 <button
