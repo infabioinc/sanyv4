@@ -360,8 +360,8 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
         {/* Alternating editorial model blocks */}
         <div className="mt-16 sm:mt-20">
           {[
-            { id: '5538e', name: 'SANY 5538E', tag: 'High-Turnaround Multi-Shift Tractor', desc: 'Optimised for regional fleet distribution, continuous multi-shift turnaround and the lowest per-kilometre operating cost.', image: '/images/sany-hero-mountain.jpg' },
-            { id: '5550e', name: 'SANY 5550E', tag: 'High-Torque Port & Industrial Hauler', desc: 'Built for high-volume commercial logistics, port terminal haulage and extreme industrial duty cycles with 2,800 Nm instant torque.', image: '/images/sany-hero-yard.jpg' },
+            { id: '5538e', name: 'SANY 5538E', tag: 'High-Turnaround Multi-Shift Tractor', desc: 'Optimised for regional fleet distribution, continuous multi-shift turnaround and the lowest per-kilometre operating cost.', image: '/images/sany-5538e-model.jpg' },
+            { id: '5550e', name: 'SANY 5550E', tag: 'High-Torque Port & Industrial Hauler', desc: 'Built for high-volume commercial logistics, port terminal haulage and extreme industrial duty cycles with 2,800 Nm instant torque.', image: '/images/sany-5550e-model.jpg' },
             { id: '5565e', name: 'SANY 5565E', tag: 'Intercity Industrial Freight Flagship', desc: 'Engineered for heavy industrial transport and long-haul intercity routes with maximum uptime and sub-zero thermal resilience.', image: '/images/sany-hero-bridge.jpg' },
           ].map((m, i) => (
             <div key={m.id} className="grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-slate-100 first:border-t-0">
