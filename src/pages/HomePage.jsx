@@ -385,6 +385,139 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
       </section>
 
       {/* ========================================================================= */}
+      {/* 2.5 TECHNOLOGY: PROPRIETARY EV ARCHITECTURE                               */}
+      {/* ========================================================================= */}
+      <section id="technology" className="w-full pt-0 pb-0 bg-white border-b border-slate-200 scroll-mt-20 overflow-hidden relative">
+        <span id="tech" className="sr-only"></span>
+        <span id="advantage" className="sr-only"></span>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+          {/* Left: text, generous whitespace (Volvo editorial) */}
+          <div className="flex items-center px-6 sm:px-12 md:px-16 lg:px-20 py-8 lg:py-10">
+            <div className="max-w-xl lg:ml-auto lg:pr-14 space-y-5">
+              <span className="eyebrow"><span className="w-6 h-px bg-sany-red"></span>Proprietary EV Architecture</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-sany-ink tracking-tight leading-[1.05]">
+                Engineered for 55-Tonne Duty Cycles
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                Every kilowatt, component, and thermal loop is built from the ground up for extreme Indian operating conditions, continuous multi-shift operations, and maximum daily productivity.
+              </p>
+              <button
+                onClick={() => onNavigateToSpecs && onNavigateToSpecs()}
+                className="inline-flex items-center gap-2 text-sm font-bold text-sany-ink uppercase tracking-wider group cursor-pointer pt-1"
+              >
+                <span>Explore Technical Specifications</span>
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </div>
+          </div>
+          {/* Right: full truck image (never cropped), flush to the top line */}
+          <div className="relative w-full overflow-hidden bg-white flex items-center">
+            <img src="/images/sany-5565e-coastal.jpg" alt="SANY 5565E heavy-duty electric truck" className="w-full h-auto block" />
+          </div>
+        </div>
+
+        {/* Subsystem cards — inset with breathing space (Volvo utility-card style) */}
+        <div className="w-full px-6 sm:px-12 md:px-16 lg:px-20 pt-10 sm:pt-14 pb-16 sm:pb-20">
+
+          {/* Interactive Engineering Split Architecture Showcase */}
+          {(() => {
+            const architecturePillars = [
+              {
+                id: 'powertrain',
+                step: '01',
+                icon: Zap,
+                eyebrow: 'HIGH-TORQUE PROPULSION',
+                title: 'Dual PMSM & 6-Speed AMT',
+                desc: '480 kW synchronous drive with 3,000 Nm instant torque for heavy 55T haulage.',
+                image: '/images/tech-architecture.jpg',
+                metricLabel: 'PEAK TORQUE',
+                metricVal: '3,000 Nm',
+                color: '#E60012',
+                chips: ['480 kW (650 HP)', '25%+ Gradeability', 'Zero RPM Max Torque']
+              },
+              {
+                id: 'battery',
+                step: '02',
+                icon: Battery,
+                eyebrow: 'ENERGY PLATFORM',
+                title: 'Liquid-Chilled LFP Cells',
+                desc: 'High-density LFP packs with active thermal management from -20°C to 52°C.',
+                image: '/images/tech-battery-pack.jpeg',
+                metricLabel: 'BATTERY PACK',
+                metricVal: 'Up to 462 kWh',
+                color: '#E60012',
+                chips: ['Multi-Loop Liquid Thermal', '4,000+ Cycles', 'Sub-Zero Preheating']
+              },
+              {
+                id: 'charging',
+                step: '03',
+                icon: Clock,
+                eyebrow: 'DEPOT TURNAROUND',
+                title: 'Dual-Gun CCS2 Fast Charge',
+                desc: 'Simultaneous dual-gun DC charging in 55–60 mins with 5-level regenerative braking.',
+                image: '/images/tech-charging-swap.jpg',
+                metricLabel: 'TURNAROUND',
+                metricVal: '55–60 Mins',
+                color: '#E60012',
+                chips: ['Dual-Gun DC Charging', '25% Descent Recovery', 'Dual CCS2 Euro Ports']
+              },
+              {
+                id: 'chassis',
+                step: '04',
+                icon: Shield,
+                eyebrow: 'STRUCTURAL INTEGRITY',
+                title: '300mm Reinforced Frame',
+                desc: 'Heavy-duty ladder frame with parabolic leaf springs and 360° ADAS vision.',
+                image: '/images/tech-chassis-frame.jpg',
+                metricLabel: 'STEEL FRAME',
+                metricVal: '300×80×15 mm',
+                color: '#E60012',
+                chips: ['Parabolic Leaf Springs', 'High-Tensile Ladder Frame', '360° Panoramic ADAS']
+              }
+            ];
+
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                {architecturePillars.map((p) => (
+                  <div
+                    key={p.id}
+                    onClick={() => onNavigateToSpecs && onNavigateToSpecs()}
+                    className="group relative overflow-hidden rounded-2xl bg-sany-ink min-h-[380px] sm:min-h-[430px] flex flex-col justify-end cursor-pointer"
+                  >
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      className="absolute inset-0 w-full h-full object-cover brightness-[0.62] group-hover:scale-[1.04] transition-transform duration-[900ms] ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-sany-ink/95 via-sany-ink/30 to-transparent" />
+                    <div className="relative z-10 p-6 sm:p-8">
+                      <div className="flex items-center gap-2.5 mb-3">
+                        <span className="text-sm font-extrabold text-white/70">{p.step}</span>
+                        <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/70">{p.eyebrow}</span>
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-extrabold text-white tracking-tight leading-tight">
+                        {p.title}
+                      </h3>
+                      <p className="text-sm text-white/70 mt-2.5 max-w-md leading-relaxed">
+                        {p.desc}
+                      </p>
+                      <div className="mt-6">
+                        <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white group-hover:gap-2.5 transition-all">
+                          <span>Detailed specs</span>
+                          <ChevronRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
+        </div>
+      </section>
+
+      {/* ========================================================================= */}
       {/* CLOSING BAND: TALK TO SANY (Volvo "find a dealer" style) */}
       {/* ========================================================================= */}
       <section className="relative w-full min-h-[440px] sm:min-h-[540px] flex items-center justify-center overflow-hidden">
