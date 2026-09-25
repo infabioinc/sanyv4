@@ -211,7 +211,7 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
             className="w-full h-full object-cover object-center"
           >
             <source
-              src="/images/without-watermark.mp4"
+              src="/images/hero-sany.mp4"
               type="video/mp4"
             />
             <source
@@ -373,13 +373,13 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
         {/* Alternating editorial model blocks */}
         <div className="mt-16 sm:mt-20">
           {[
-            { id: '5538e', name: 'SANY 5538E', tag: 'High-Turnaround Multi-Shift Tractor', desc: 'Optimised for regional fleet distribution, continuous multi-shift turnaround and the lowest per-kilometre operating cost.', image: '/images/sany-5538e-cutout.png' },
-            { id: '5550e', name: 'SANY 5550E', tag: 'High-Torque Port & Industrial Hauler', desc: 'Built for high-volume commercial logistics, port terminal haulage and extreme industrial duty cycles with 2,800 Nm instant torque.', image: '/images/sany-5550e-cutout.png' },
-            { id: '5565e', name: 'SANY 5565E', tag: 'Intercity Industrial Freight Flagship', desc: 'Engineered for heavy industrial transport and long-haul intercity routes with maximum uptime and sub-zero thermal resilience.', image: '/images/sany-5565e-cutout.png' },
+            { id: '5538e', name: 'SANY 5538E', tag: 'High-Turnaround Multi-Shift Tractor', desc: 'Optimised for regional fleet distribution, continuous multi-shift turnaround and the lowest per-kilometre operating cost.', image: '/images/sany-hero-mountain.jpg' },
+            { id: '5550e', name: 'SANY 5550E', tag: 'High-Torque Port & Industrial Hauler', desc: 'Built for high-volume commercial logistics, port terminal haulage and extreme industrial duty cycles with 2,800 Nm instant torque.', image: '/images/sany-hero-yard.jpg' },
+            { id: '5565e', name: 'SANY 5565E', tag: 'Intercity Industrial Freight Flagship', desc: 'Engineered for heavy industrial transport and long-haul intercity routes with maximum uptime and sub-zero thermal resilience.', image: '/images/sany-hero-bridge.jpg' },
           ].map((m, i) => (
             <div key={m.id} className="grid grid-cols-1 lg:grid-cols-2 items-stretch border-t border-slate-100 first:border-t-0">
-              <div className={`relative min-h-[280px] sm:min-h-[380px] bg-sany-surface flex items-center justify-center p-8 sm:p-12 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <img src={m.image} alt={m.name} className="max-h-[230px] sm:max-h-[300px] w-auto object-contain drop-shadow-[0_20px_35px_rgba(11,15,20,0.15)]" />
+              <div className={`relative min-h-[300px] sm:min-h-[440px] overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <img src={m.image} alt={m.name} className="absolute inset-0 w-full h-full object-cover object-center" />
               </div>
               <div className={`flex items-center px-6 sm:px-12 md:px-16 lg:px-20 py-12 lg:py-0 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <div className="max-w-md">
