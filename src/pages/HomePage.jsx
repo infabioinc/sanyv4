@@ -416,8 +416,8 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
           </div>
         </div>
 
-        {/* Subsystem cards — joined edge-to-edge (Volvo Trucks/Services style) */}
-        <div className="w-full">
+        {/* Subsystem cards — inset with breathing space (Volvo utility-card style) */}
+        <div className="w-full px-6 sm:px-12 md:px-16 lg:px-20 pt-10 sm:pt-14 pb-16 sm:pb-20">
 
           {/* Interactive Engineering Split Architecture Showcase */}
           {(() => {
@@ -477,12 +477,12 @@ export default function HomePage({ onOpenQuote, onOpenCompare, onNavigateToSpecs
             ];
 
             return (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                 {architecturePillars.map((p) => (
                   <div
                     key={p.id}
                     onClick={() => onNavigateToSpecs && onNavigateToSpecs()}
-                    className="group relative overflow-hidden bg-sany-ink min-h-[400px] sm:min-h-[460px] flex flex-col justify-end cursor-pointer"
+                    className="group relative overflow-hidden rounded-2xl bg-sany-ink min-h-[380px] sm:min-h-[430px] flex flex-col justify-end cursor-pointer"
                   >
                     <img
                       src={p.image}
